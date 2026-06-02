@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterShader 1
-  m_Shader: {fileID: -6465566751694194690, guid: d024f7f2d1b4e584cb14c1e55da09e46, type: 3}
+  m_Name: WaterSide
+  m_Shader: {fileID: -6465566751694194690, guid: c8be1957ff0095e4cba0a733a25c1aa9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -35,7 +35,7 @@ Material:
     m_Colors:
     - _RippleColor: {r: 0.1331024, g: 0.2440212, b: 0.5296369, a: 1}
     - _WaterColor: {r: 0.16862746, g: 0.7372549, b: 0.71745795, a: 0}
-    - _WaterColor2: {r: 0.187124, g: 0.3051686, b: 0.326, a: 0.01176471}
+    - _WaterColor2: {r: 0.1214209, g: 0.30006236, b: 0.4716981, a: 0.01176471}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &123723824542786872
