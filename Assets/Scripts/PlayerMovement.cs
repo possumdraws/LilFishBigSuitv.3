@@ -7,12 +7,22 @@ public class Player : MonoBehaviour
 
     private Vector3 moveDirection;
 
+    private Animator animator;
+
+    private bool isMoving;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
 
     // Update is called once per frame
     void Update()
     {
         HandleMovement();
 
+        animator.SetBool("isMoving", isMoving);
     }
 
     private void HandleMovement()
@@ -22,6 +32,9 @@ public class Player : MonoBehaviour
 
         moveDirection = new Vector3(horizontal, vertical, 0f).normalized;
 
+        isMoving = moveDirection.magnitude > 0;
+
         transform.Translate(moveDirection * speed * Time.deltaTime);
+
     }
 }
