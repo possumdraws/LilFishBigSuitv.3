@@ -9,10 +9,15 @@ public class Pickup_Script : MonoBehaviour
     //Variables
     public bool canPickup; //Object can be picked up?
     public float pickupRange = 1.8f; //Range at which the player can pick up the pickup
-    public TextMeshProUGUI inventoryText; //Reference to the inventory text
 
     //References
+    public TextMeshProUGUI pickupText; //Reference to the inventory text
     public Transform playerToPickup, pickupToPlayer; //Used for the distanceToPlayer calculation
+    /// <summary> For the above variables^
+    /// Attach the player's transform to the pickup inside of Unity
+    /// Attach the pickup's transform to the player inside of Unity
+    /// </summary>
+    
     public Inventory inventory;
 
     void Start()
@@ -28,12 +33,12 @@ public class Pickup_Script : MonoBehaviour
         {
             Debug.Log(distanceToPlayer + " is less than or equal to " + pickupRange);
             canPickup = true;
-            inventoryText.text = "Press E to pick up"; //Display the pickup prompt when the player is in range
+            pickupText.text = "Press E to pick up"; //Display the pickup prompt when the player is in range
         }
         else
         {
             canPickup = false;
-            inventoryText.text = ""; //Clear the inventory text when the player is out of range
+            pickupText.text = ""; //Clear the inventory text when the player is out of range
         }
 
         if (Input.GetKeyDown(KeyCode.E) && canPickup)
@@ -42,7 +47,7 @@ public class Pickup_Script : MonoBehaviour
             inventory.AddItem();
             gameObject.SetActive(false); //Hides the pickup; Debugging purposes, can be removed later
             //DestroyImmediate(gameObject); //Destroys the pickup
-            inventoryText.text = ""; //Clear the inventory text when the player is out of range
+            pickupText.text = ""; //Clear the inventory text when the player is out of range
         }
     }
 }

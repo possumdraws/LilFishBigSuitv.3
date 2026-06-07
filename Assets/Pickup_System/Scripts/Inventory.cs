@@ -29,4 +29,10 @@ public class Inventory : MonoBehaviour
         numberOfKeys++;
         UpdateInventoryText();
     }
+
+    public void RemoveItem()
+    {
+        numberOfKeys--;
+        UpdateInventoryText();
+    }
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //Variables
     [SerializeField]
     private float speed = 5f;
 
