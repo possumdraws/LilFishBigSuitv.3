@@ -20273,7 +20273,7 @@ Transform:
   m_GameObject: {fileID: 570790707}
   serializedVersion: 2
   m_LocalRotation: {x: -1.6543606e-24, y: 1.8367e-41, z: -1.11022296e-17, w: 1}
-  m_LocalPosition: {x: -6.03135, y: 4.54, z: -0.67769974}
+  m_LocalPosition: {x: -6.03135, y: 4.54, z: 3.95}
   m_LocalScale: {x: 1.0105376, y: 1, z: 0.86918724}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52275,6 +52275,7 @@ MonoBehaviour:
   doorToPlayer: {fileID: 1343166171}
   Door: {fileID: 1343166167}
   Door2ndLocation: {fileID: 482572590}
+  range: {fileID: 1787796833}
   inventory: {fileID: 959848659}
 --- !u!1 &1344578714
 GameObject:
@@ -52306,7 +52307,7 @@ Transform:
   m_GameObject: {fileID: 1344578714}
   serializedVersion: 2
   m_LocalRotation: {x: -1.6543606e-24, y: 1.8367e-41, z: -1.11022296e-17, w: 1}
-  m_LocalPosition: {x: -6.03135, y: 4.35, z: -0.67769974}
+  m_LocalPosition: {x: -6.03135, y: 4.35, z: 3.9499998}
   m_LocalScale: {x: 1.0105376, y: 1, z: 0.86918724}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69667,7 +69668,7 @@ Transform:
   m_GameObject: {fileID: 1684567901}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.0206428, y: 1.47, z: -0.53020394}
+  m_LocalPosition: {x: 1.0206428, y: 1.47, z: 0.84}
   m_LocalScale: {x: 0.86918724, y: 1, z: 1.0105376}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72630,7 +72631,7 @@ Transform:
   m_GameObject: {fileID: 1763276903}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.668683, y: 1.47, z: -2.1034331}
+  m_LocalPosition: {x: -4.668683, y: 1.47, z: -0.73322916}
   m_LocalScale: {x: 0.7366064, y: 0.86918724, z: 0.29297101}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86546,11 +86547,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8158158174693525540, guid: d6ae8c039f84e394fb9001b8f4326c01, type: 3}
       propertyPath: m_fontSize
-      value: 42
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 8158158174693525540, guid: d6ae8c039f84e394fb9001b8f4326c01, type: 3}
       propertyPath: m_fontSizeBase
-      value: 42
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 8389309992107108287, guid: d6ae8c039f84e394fb9001b8f4326c01, type: 3}
       propertyPath: m_AnchoredPosition.y
