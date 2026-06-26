@@ -7,7 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<<< HEAD:Assets/Materials/FakeWood.mat
   m_Name: FakeWood
+========
+  m_Name: Barrel
+>>>>>>>> 3b2b917ac5006810271460617de1b736c1fbaaa4:Assets/Materials/ObjectMaterials/Barrel.mat
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -44,7 +48,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9f55d7c0249c2cc45ad192fedb4fc72e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -78,7 +82,11 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+<<<<<<<< HEAD:Assets/Materials/FakeWood.mat
     - _Color: {r: 0.16299999, g: 0.109477594, b: 0.051089544, a: 1}
+========
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>>> 3b2b917ac5006810271460617de1b736c1fbaaa4:Assets/Materials/ObjectMaterials/Barrel.mat
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/FADEBlueWallTexture 1.mat.meta
 guid: 9cf0ea3e6d3a0404b86470797653b2f9
+========
+guid: 0b20b035c23fb9e41a420a783ad74345
+>>>>>>>> 3b2b917ac5006810271460617de1b736c1fbaaa4:Assets/Materials/ObjectMaterials/Barrel.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
