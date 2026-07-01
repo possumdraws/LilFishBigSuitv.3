@@ -12,10 +12,11 @@ public class Pickup_Script : MonoBehaviour
 
     //References
     public TextMeshProUGUI pickupText; //Reference to the inventory text
-    [Header("Transforms for pickup mechanic")]
-    [Tooltip("Attach the player's transform to the pickup inside of Unity")]
-    public Transform playerToPickup;
-    public Transform pickupToPlayer; //Used for the distanceToPlayer calculation
+    public Transform playerToPickup, pickupToPlayer; //Used for the distanceToPlayer calculation
+    /// <summary> For the above variables^
+    /// Attach the player's transform to the pickup inside of Unity
+    /// Attach the pickup's transform to the player inside of Unity
+    /// </summary>
     
     public Inventory inventory;
 
@@ -44,8 +45,8 @@ public class Pickup_Script : MonoBehaviour
         {
             canPickup = false;
             inventory.AddItem();
-            //gameObject.SetActive(false); //Hides the pickup; Debugging purposes, can be removed later
-            DestroyImmediate(gameObject); //Destroys the pickup
+            gameObject.SetActive(false); //Hides the pickup; Debugging purposes, can be removed later
+            //DestroyImmediate(gameObject); //Destroys the pickup
             pickupText.text = ""; //Clear the inventory text when the player is out of range
         }
     }
