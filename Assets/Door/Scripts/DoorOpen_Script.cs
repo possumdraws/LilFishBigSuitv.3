@@ -11,11 +11,15 @@ public class DoorOpen_Script : MonoBehaviour
     public bool canDoorBeOpen; 
     public bool doorUnlocked; //Used for when the player uses a key to unlock the door, the door will stay unlockeable.
     public float doorRange = 1.8f; //The range at which the player can open the door.
-
     //References
     public TextMeshProUGUI openDoorText;
-    public Transform playerToDoor, doorToPlayer;
-    public GameObject Door, Door2ndLocation; //Used to move the door that is shown in scene to another position
+    [Header("References for the distance between the player and the door")]
+    public Transform playerToDoor;
+    public Transform doorToPlayer;
+    public GameObject Door;
+    public GameObject Door2ndLocation; //Used to move the door that is shown in scene to another position
+    public GameObject range;
+    [Space]
     private float _doorMoveSpeed = 2f; //The speed at which the door will move to the new position when it is unlocked.
     public Inventory inventory;
 
@@ -38,12 +42,12 @@ public class DoorOpen_Script : MonoBehaviour
 
         if (distanceToDoor <= doorRange)
         {
+            //Breaks out of the loop, avoids having the text pop up when the door is already unlocked.
+            if (canDoorBeOpen == true)
+            {
+                return;
+            }
             CheckForKey();
-            Debug.Log("Player is in range of the door.");
-        }
-        else
-        {
-            openDoorText.text = "";
         }
     }
 
@@ -55,18 +59,22 @@ public class DoorOpen_Script : MonoBehaviour
             openDoorText.text = "You need a key to open this door.";
             Debug.Log("Player does not have the key to unlock the door.");
         }
-        else
+        else if (inventory.numberOfKeys > 0)
         {
             Debug.Log("Player has the key to unlock the door.");
             openDoorText.text = "Press E to open the door. -1 Key";
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                inventory.numberOfKeys -= 1;
-                Door.transform.position = Vector3.MoveTowards(Door.transform.position, Door2ndLocation.transform.position, _doorMoveSpeed);
-                doorUnlocked = true;
-                canDoorBeOpen = true;
-                Debug.Log("Door is now unlocked.");
-            }
+        }
+
+        //Open door mechanic
+        if (Input.GetKeyDown(KeyCode.E) && inventory.numberOfKeys > 0)
+        {
+            inventory.numberOfKeys -= 1;
+            Door.transform.position = Vector3.MoveTowards(Door.transform.position, Door2ndLocation.transform.position, _doorMoveSpeed);
+            canDoorBeOpen = true;
+            doorUnlocked = true;
+            range.SetActive(false);
+            Debug.Log("Door is now unlocked.");
+            openDoorText.text = "";
         }
     }
 }
